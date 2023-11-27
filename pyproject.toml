@@ -1,10 +1,10 @@
 [project]
 name = "django_rest_framework_query_tools"
-version = "1.0"
+version = "1.1"
 authors = [
   { name="Joe Philip", email="joe.philip@hotmail.co.in" },
 ]
-description = "The package allows developers to enhance filtering capabilities within Django Rest Framework views by simply specifying the desired filter fields. By incorporating the QueryParamsFilter into views or adding it to the Django Rest Framework settings, the package streamlines the filtering process."
+description = "The package allows developers to enhance filtering capabilities within Django Rest Framework views by simply specifying the desired filter fields. By incorporating the URLFilter into views or adding it to the Django Rest Framework settings, the package streamlines the filtering process."
 readme = "README.md"
 requires-python = ">=3.8.16"
 classifiers = [
