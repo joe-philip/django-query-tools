@@ -21,13 +21,12 @@ In your views.py, specify the field(s) to filter using filter_fields:
 from rest_framework.views import APIView
 from rest_framework import generics
 from rest_framework import filters
-from django_filters.rest_framework import DjangoFilterBackend
-from drf_query_tools.filters import QueryParamsFilter
+from django_rest_framework_query_tools.filters.url_fliter import URLFilter
 
 class BooksListView(generics.ListAPIView):
     queryset = Books.objects.all()
     serializer_class = BookSerializer
-    filter_backends = [QueryParamsFilter, DjangoFilterBackend]
+    filter_backends = [URLFilter]
     filter_fields = ('author',)
 ```
 
@@ -61,7 +60,7 @@ Add the QueryParamsFilter to your Django Rest Framework settings:
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
-        'drf_query_tools.filters.QueryParamsFilter'
+        'django_rest_framework_query_tools.filters.url_fliter.URLFilter'
     ]
 }
 ```
