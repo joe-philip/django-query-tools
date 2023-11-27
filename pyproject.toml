@@ -1,6 +1,6 @@
 [project]
 name = "django_rest_framework_query_tools"
-version = "0.0.21"
+version = "0.0.22"
 authors = [
   { name="Joe Philip", email="joe.philip@hotmail.co.in" },
 ]
@@ -14,8 +14,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/joe-philip/django-query-tools"
-Issues = "https://github.com/joe-philip/django-query-tools/issues"
+Homepage = "https://github.com/joe-philip/django_rest_framework_query_tools"
+Issues = "https://github.com/joe-philip/django_rest_framework_query_tools/issues"
 
 [build-system]
 requires = ["djangorestframework>=3.14.0", "toml"]
