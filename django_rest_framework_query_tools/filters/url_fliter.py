@@ -1,11 +1,11 @@
 from re import search
 
-from django.conf import settings
+# from django.conf import settings
 from django.core.exceptions import ValidationError as DjangoValidationErrror
 from django.db.models import QuerySet
 from rest_framework.exceptions import \
     ValidationError as RestFrameworkValidationError
-from rest_framework.filters import BaseFilterBackend, OrderingFilter
+from rest_framework.filters import BaseFilterBackend
 from rest_framework.generics import ListAPIView
 from rest_framework.request import Request
 
@@ -35,11 +35,3 @@ class URLFilter(BaseFilterBackend):
             except (ValueError, DjangoValidationErrror) as e:
                 raise RestFrameworkValidationError(e)
         return queryset
-
-
-class CustomOrderingFilter(OrderingFilter):
-    def get_default_ordering(self, view: ListAPIView):
-        ordering = getattr(view, 'ordering', None)
-        if isinstance(ordering, list) or isinstance(ordering, tuple) or isinstance(ordering, set):
-            return ordering
-        return settings.DEFAULT_ORDER_BY_VALUE
