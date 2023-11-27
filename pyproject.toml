@@ -1,10 +1,10 @@
 [project]
 name = "django_rest_framework_query_tools"
-version = "0.0.20"
+version = "0.0.21"
 authors = [
   { name="Joe Philip", email="joe.philip@hotmail.co.in" },
 ]
-description = "A small example package"
+description = "A small package that help you filter list api responses from frontend using query parameters."
 readme = "README.md"
 requires-python = ">=3.8.16"
 classifiers = [
